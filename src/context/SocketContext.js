@@ -5,7 +5,7 @@ import { io } from 'socket.io-client'
 const SocketContext = createContext();
 
 export const SocketContextProvider = ({ children }) => {
-  const socket = io("ws://localhost:8900")
+  const socket = io("ws://messenger-clone-socket.vercel.app/")
   return (
     <SocketContext.Provider value={socket}>
       {children}
