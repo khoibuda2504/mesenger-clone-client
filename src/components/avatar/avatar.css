@@ -1,0 +1,12 @@
+.chatOnlineBadge {
+  position: absolute;
+  background: green;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: -1px;
+  right: 22px;
+}
+.avatar {
+  position: relative;
+}

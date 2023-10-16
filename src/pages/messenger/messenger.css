@@ -1,0 +1,159 @@
+.messenger {
+  height: 98vh;
+  display: flex;
+}
+
+.chatMenu {
+  flex: 2;
+  border-right: 1px solid rgb(202 190 190)
+}
+.chatMenuWrapper {
+  padding: 10px;
+}
+.chatMenuInput {
+  width: 90%;
+  padding: 10px 5px;
+  border-radius: 3px;
+  margin: 10px 0px;
+  outline: none;
+  border: 1px solid transparent;
+}
+.chatMenuInput:focus {
+  border: 1px solid gray;
+}
+
+.chatBox {
+  flex: 10;
+}
+
+.chatBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding-left: 10px;
+}
+
+.chatBoxTop {
+  /* height: 100%; */
+  overflow-y: scroll;
+  padding-right: 10px;
+  max-height: 83vh;
+}
+
+.chatBoxBottom {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.chatMessageInput {
+  width: 92%;
+  height: 90px;
+  padding: 10px;
+  resize: none;
+}
+
+.chatSubmitButton {
+  width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: teal;
+  color: white;
+  margin-right: 10px;
+}
+
+.chatOnline {
+  flex: 3;
+}
+
+.chatMenuWrapper,
+.chatBoxWrapper,
+.chatOnlineWrapper {
+  height: 100%;
+}
+
+.noConversationText {
+  font-size: 50px;
+  color: rgb(224, 220, 220);
+  cursor: default;
+  text-align: right;
+  padding-right: 15px;
+}
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chatHeaderOwn {
+  display: flex;
+  align-items: center;
+}
+.chatLogOut {
+  cursor: pointer;
+}
+.chatBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.chatBtn > svg {
+  position: relative;
+  top: -2px;
+  display: none;
+}
+.chatBack {
+  background: rgb(245, 241, 241);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+}
+.scrollRef {
+  height: 5px;
+  padding-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .chatMenu {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    height: 100%;
+    width: 200px;
+    transition: all .3s ease-in;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .chatMenu.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .chatBox{
+    flex: 10;
+  }
+
+  .chatOnline{
+    flex: 1;
+  }
+  .chatBtn > svg {
+    display: block;
+  }
+  .chatBack {
+    display: flex;
+  }
+  .noConversationText {
+    padding-top: 50px;
+  }
+}
