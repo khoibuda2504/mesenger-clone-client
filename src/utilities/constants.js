@@ -1,1 +1,1 @@
-export const apiUrl = process.env.NODE_ENV !== 'production' ? "" : "http://localhost:8800/api"
+export const apiUrl = process.env.NODE_ENV !== 'production' ? "https://mesenger-clone-api-fqsk.vercel.app/api" : "http://localhost:8800/api"
